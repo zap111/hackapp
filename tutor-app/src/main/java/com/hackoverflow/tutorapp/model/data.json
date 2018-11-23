@@ -2,27 +2,7 @@
   "tutors": [
     {
       "id": 1,
-      "name": "A",
-      "address": {
-        "latitude": 12112.323,
-        "longitude": 3434.234
-      }
-    },
-    {
-      "id": 2,
-      "name": "B",
-      "address": {
-        "latitude": 1212.323,
-        "longitude": 3534.234
-      }
-    },
-    {
-      "id": 3,
-      "name": "C",
-      "address": {
-        "latitude": 12212.323,
-        "longitude": 534.234
-      }
+      "name": "A"
     }
   ]
 }
