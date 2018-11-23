@@ -8,11 +8,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+@Entity
 @Getter
 @Setter
-@Entity
 public class Course {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

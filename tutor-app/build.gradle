@@ -35,4 +35,5 @@ dependencies {
 	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.2'
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.apache.opennlp:opennlp-tools:1.6.0')
 }
