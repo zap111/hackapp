@@ -26,8 +26,8 @@ public class TutorController {
         return tutorService.getDetails(id);
     }
 
-    @GetMapping("/tutors")
-    public Tutors getTutors(String input) throws Exception {
-        return searchService.getResult(input);
-    }
+//    @GetMapping("/tutors")
+//    public Tutors getTutors(String input) throws Exception {
+//        return searchService.getResult(input);
+//    }
 }
