@@ -36,11 +36,14 @@ public class Tutor {
     public String videoLink;
 
     @Column(name = "standard")
+    @Enumerated(value = EnumType.STRING)
     public Standard standard;
 
-    //  public AddressDTO address;
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "address_id", insertable = false, updatable = false)
+    public Address address;
 
     //  public List<Course> courses;
 
-    //    public List<Comment> comments;
+    //    public List<CommentDTO> comments;
 }

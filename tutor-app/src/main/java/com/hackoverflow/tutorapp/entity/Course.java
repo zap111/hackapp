@@ -8,16 +8,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Entity
 @Getter
 @Setter
-public class Address {
+@Entity
+public class Course {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String address;
-    private Double latitude;
-    private Double longitude;
+    private String name;
 }

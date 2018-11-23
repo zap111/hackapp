@@ -7,17 +7,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.sql.Timestamp;
 
 @Entity
 @Getter
 @Setter
-public class Address {
+public class Booking {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public Long id;
 
-    private String address;
-    private Double latitude;
-    private Double longitude;
+    public Long tutorId;
+    public Long userId;
+    public Long price;
+    public Timestamp bookedFor;
+    public Timestamp createdDate;
 }

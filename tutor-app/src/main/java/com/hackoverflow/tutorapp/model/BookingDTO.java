@@ -1,22 +1,19 @@
 package com.hackoverflow.tutorapp.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.sql.Timestamp;
+
+@Getter
+@Setter
 public class BookingDTO {
-    public String bookingId;
-    public BookingDetails bookingDetails;
 
-    public String getBookingId() {
-        return bookingId;
-    }
+    public Long id;
+    public Long tutorId;
+    public Long userId;
+    public Long price;
+    public Timestamp time;
+    public Timestamp createdDate;
 
-    public void setBookingId(String bookingId) {
-        this.bookingId = bookingId;
-    }
-
-    public BookingDetails getBookingDetails() {
-        return bookingDetails;
-    }
-
-    public void setBookingDetails(BookingDetails bookingDetails) {
-        this.bookingDetails = bookingDetails;
-    }
 }
