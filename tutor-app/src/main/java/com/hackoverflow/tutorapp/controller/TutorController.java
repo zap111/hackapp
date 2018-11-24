@@ -1,11 +1,18 @@
 package com.hackoverflow.tutorapp.controller;
 
+import com.hackoverflow.tutorapp.entity.Tutor;
 import com.hackoverflow.tutorapp.model.CommentDTO;
 import com.hackoverflow.tutorapp.model.TutorDTO;
 import com.hackoverflow.tutorapp.service.SearchService;
 import com.hackoverflow.tutorapp.service.TutorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -44,5 +51,10 @@ public class TutorController {
     @GetMapping("/sentiment")
     public String getSentiment(@RequestParam String text) throws Exception {
         return tutorService.getSentiment(text);
+    }
+
+    @GetMapping("/search")
+    public List<Tutor> getTutors(String search) throws Exception {
+        return searchService.getSearchResult(search);
     }
 }
