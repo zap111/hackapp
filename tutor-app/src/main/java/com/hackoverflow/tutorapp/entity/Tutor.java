@@ -1,18 +1,20 @@
 package com.hackoverflow.tutorapp.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.hackoverflow.tutorapp.enums.Standard;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Setter
 @Getter
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString(doNotUseGetters = true, exclude = "courses")
 public class Tutor {
 
     @Id
@@ -43,7 +45,11 @@ public class Tutor {
     @JoinColumn(name = "address_id", insertable = false, updatable = false)
     public Address address;
 
-    //  public List<Course> courses;
+    @JsonIgnore
+    @OneToMany(mappedBy = "tutor")
+    public List<Course> courses;
 
-    //    public List<CommentDTO> comments;
+    @JsonIgnore
+    @OneToMany(mappedBy = "tutor")
+    public List<Comment> comments;
 }

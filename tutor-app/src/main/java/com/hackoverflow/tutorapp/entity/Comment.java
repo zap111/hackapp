@@ -1,26 +1,26 @@
 package com.hackoverflow.tutorapp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString(exclude = "tutor")
-public class Course {
+@Getter
+public class Comment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    public Long id;
 
-    private String name;
-    private Integer timeOfDay;
+    public String comment;
+    public Long tutorId;
+    public Long userId;
+    public String sentiment;
 
     @JsonIgnore
     @ManyToOne(targetEntity = Tutor.class)
     @JoinColumn(name = "tutorId", referencedColumnName = "id", insertable = false, updatable = false)
-    private Tutor tutor;
+    public Tutor tutor;
 }

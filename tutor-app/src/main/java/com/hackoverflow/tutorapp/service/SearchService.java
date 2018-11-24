@@ -1,6 +1,5 @@
 package com.hackoverflow.tutorapp.service;
 
-import com.hackoverflow.tutorapp.model.Tutors;
 import com.hackoverflow.tutorapp.repository.CourseRepository;
 import com.hackoverflow.tutorapp.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +13,8 @@ public class SearchService {
     @Autowired
     private CourseRepository courseRepository;
 
-    public static Tutors getResult(String searchString) throws Exception {
+    public static void getResult(String searchString) throws Exception {
         LocationFn.find(searchString);
-
-        return null;
     }
 
     public static void main(String[] args) throws Exception {
