@@ -20,8 +20,6 @@ public class SearchService {
     public static List<Tutor> getResult(String searchString) throws Exception {
 
         List<String> search = new LocationFn().getPOSModel(searchString);
-
-        return null;
     }
 
     public static void main(String[] args) throws Exception {
