@@ -17,6 +17,7 @@ public class Comment {
     public String comment;
     public Long tutorId;
     public Long userId;
+    public String user;
     public String sentiment;
 
     @JsonIgnore

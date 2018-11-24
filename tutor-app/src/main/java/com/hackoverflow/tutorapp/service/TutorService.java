@@ -55,6 +55,7 @@ public class TutorService {
         courseDTOS.forEach(courseDTO -> {
             Course course = new Course();
             BeanUtils.copyProperties(courseDTO, course);
+            course.setTutorId(tutorDTO.getId());
             courses.add(course);
         });
         courseRepository.save(courses);

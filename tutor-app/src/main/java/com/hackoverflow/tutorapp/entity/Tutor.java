@@ -31,6 +31,9 @@ public class Tutor {
     @Column(name = "email")
     public String email;
 
+    @Column(name = "mobile")
+    public String mobile;
+
     @Column(name = "description")
     public String description;
 

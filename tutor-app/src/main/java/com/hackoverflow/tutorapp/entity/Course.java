@@ -16,8 +16,11 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String value;
     private Integer timeOfDay;
+    private Long tutorId;
+
+    public Integer fees;
 
     @JsonIgnore
     @ManyToOne(targetEntity = Tutor.class)

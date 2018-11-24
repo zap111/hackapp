@@ -14,4 +14,6 @@ public class CourseDTO {
     private Long id;
     private String value;
     private Integer timeOfDay;
+    private Integer fees;
+    private Long tutorId;
 }

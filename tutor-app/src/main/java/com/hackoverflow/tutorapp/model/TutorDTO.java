@@ -19,7 +19,9 @@ public class TutorDTO {
     public String description;
     public List<CourseDTO> courses;
     public String videoLink;
+    public String mobile;
     public Standard standard;
+    public Integer fees;
     public List<CommentDTO> comments;
 
 }

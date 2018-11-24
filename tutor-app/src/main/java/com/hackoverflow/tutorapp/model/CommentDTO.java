@@ -10,5 +10,5 @@ public class CommentDTO {
     public String comment;
     public Long tutorId;
     public Long userId;
-    public String username;
+    public String user;
 }
