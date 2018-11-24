@@ -1,10 +1,13 @@
 package com.hackoverflow.tutorapp.service;
 
-import com.hackoverflow.tutorapp.model.Tutors;
+
+import com.hackoverflow.tutorapp.entity.Tutor;
 import com.hackoverflow.tutorapp.repository.CourseRepository;
 import com.hackoverflow.tutorapp.repository.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class SearchService {
@@ -14,14 +17,16 @@ public class SearchService {
     @Autowired
     private CourseRepository courseRepository;
 
-    public static Tutors getResult(String searchString) throws Exception {
-        LocationFn.find(searchString);
+    public static List<Tutor> getResult(String searchString) throws Exception {
+
+        List<String> search = new LocationFn().getPOSModel(searchString);
 
         return null;
     }
 
     public static void main(String[] args) throws Exception {
-        getResult("physics tutors in Hyderabad");
+        getResult("gachibowli tutors physics");
+
     }
 
 }
