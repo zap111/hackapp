@@ -23,4 +23,12 @@ public class Course {
     @ManyToOne(targetEntity = Tutor.class)
     @JoinColumn(name = "tutorId", referencedColumnName = "id", insertable = false, updatable = false)
     private Tutor tutor;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
